@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import { React, useState } from "react";
-import ReactDOM from "react-dom";
+// import { bounce, pulse } from "react-animations";
 
 function Card() {
   const [nome, setNome] = useState("");
+  const [senha, setSenha] = useState("");
 
   function fazerLogin() {
-    if (Pessoa["nome"] == "Gustavo" && Pessoa["senha"] == "12345") {
+    if (nome == "Gustavo" && senha == "12345") {
       let generateToken = "12092001";
       router.push("/login");
     } else {
@@ -27,21 +28,17 @@ function Card() {
         <div className="name"></div>
         <input
           className="valueUser"
-          value={Pessoa["nome"]}
+          value={nome}
           type="text"
           placeholder="Usuário"
-          onChange={() => {
-            Pessoa.key = value;
-          }}
+          onChange={(e) => setNome(e.target.value)}
         ></input>
         <input
           className="valuePassword"
-          value={Pessoa["senha"]}
+          value={senha}
           type="password"
           placeholder="Senha"
-          onChange={() => {
-            Pessoa.key = value;
-          }}
+          onChange={(e) => setSenha(e.target.value)}
         ></input>
       </div>
       <p>Esqueceu a senha?</p>

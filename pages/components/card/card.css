@@ -27,7 +27,7 @@ body {
 .inputs {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 1rem;
   margin-top: 20px;
   align-items: center;
   width: 100%;
@@ -101,4 +101,13 @@ button {
   position: relative;
   top: 41px;
   right: 120px;
+}
+
+.entrar:hover {
+  background-color: #80a773;
+}
+
+.cadastrar:hover {
+  background-color: #80a773;
+  color: white;
 }
