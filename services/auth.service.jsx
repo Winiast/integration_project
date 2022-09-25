@@ -1,11 +1,14 @@
 import axios from "axios";
 
-const apiLoginURL = "https://projeto-escola.herokuapp.com/";
+const apiLoginURL =
+  "https://projeto-escola.herokuapp.com/postgres/professor/autenticar/";
 
 const authService = {
-  async authenticate(data) {
-    const endpoint = `${apiLoginURL}/auth/sign-in`;
-    return axios.post(endpoint, data);
+  async authenticate(nome, senha) {
+    const endpoint = `${apiLoginURL}${nome}/${senha}`;
+    return axios.get(endpoint, () => {
+      console.log("Encontrou");
+    });
   },
 
   setLoggedUser(data) {

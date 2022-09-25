@@ -1,17 +1,29 @@
 import { useRouter } from "next/router";
 import { React, useState } from "react";
+import authService from "../../../services/auth.service";
 // import { bounce, pulse } from "react-animations";
 
 function Card() {
   const [nome, setNome] = useState("");
   const [senha, setSenha] = useState("");
 
-  function fazerLogin() {
-    if (nome == "Gustavo" && senha == "12345") {
-      let generateToken = "12092001";
+  async function fazerLogin(event) {
+    event.preventDefault();
+    let data = {
+      name: nome,
+      password: senha,
+    };
+    try {
+      let resposta = await authService.authenticate(
+        data["name"],
+        data["password"]
+      );
+      console.log("resposta:", resposta.data);
+      authService.setLoggedUser(resposta.data);
       router.push("/login");
-    } else {
-      console.log("Login incorreto!");
+    } catch (error) {
+      console.log(error);
+      alert("Erro ao efetuar login");
     }
   }
 
