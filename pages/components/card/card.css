@@ -1,0 +1,104 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  background-color: #60845d;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-align: center;
+  width: 30vw;
+  height: 80vh;
+  gap: 1rem;
+  border-radius: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.body-separation {
+  background-color: #80a773;
+  height: 50vh;
+}
+
+h2 {
+  margin: 0;
+  color: white;
+  position: absolute;
+  font-family: "Inter Tight", sans-serif;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+input {
+  height: 7vh;
+  width: 20vw;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 60px;
+}
+
+p {
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.entrar {
+  background-color: #485c46;
+  color: white;
+}
+
+.butons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+button {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  width: 20vw;
+  height: 7vh;
+  margin: 0;
+  border-radius: 10px;
+  border: none;
+}
+
+.img01 {
+  position: relative;
+  top: 44px;
+  right: 120px;
+}
+
+.img02 {
+  position: relative;
+  top: 41px;
+  right: 120px;
+}
